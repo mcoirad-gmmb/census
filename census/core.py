@@ -362,7 +362,7 @@ class ACS5Client(ACSClient):
     def state_zipcode(self, fields, state_fips, zcta, **kwargs):
         return self.get(fields, geo={
             'for': 'zip code tabulation area:{}'.format(zcta),
-            'in': 'state:{}'.format(state_fips),
+            'regionin': 'state:{}'.format(state_fips),
         }, **kwargs)
 
 
